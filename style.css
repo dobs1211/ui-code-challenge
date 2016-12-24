@@ -18,29 +18,32 @@
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
 }
-
-
-/*linear gradient needs fixed*/
-
-article {
-  background: #466368;
-  background: -webkit-linear-gradient(#648880, #293f50);
-  background:    -moz-linear-gradient(#648880, #293f50);
-  background:         linear-gradient(#648880, #293f50);
-}
-
-/*linear gradient needs fixed*/
-
+/*gradient overlay start*/
 
 html, body {
-	height: 4000px;
+  width: 100%;
+  height: 100%;
 }
 
-
-.image { 
-   position: relative; 
-   width: 100%; /* for IE 6 */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background: url('../images/image1.jpg') center center no-repeat;
+  background-size: cover;
+  
+  &:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+	opacity: .6; 
+  }
 }
+
+/*gradient overlay end*/
 
 h2 { 
    position: absolute; 
@@ -51,7 +54,7 @@ h2 {
 
 h2 span { 
    color: white; 
-   font: bold 24px/45px Helvetica, Sans-Serif; 
+   font: bold 24px/45px 'Karla', sans-serif; 
    letter-spacing: -1px;  
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
