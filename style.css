@@ -1,5 +1,4 @@
-
- /*css reset*/
+/*css reset*/
 
 * {
     margin: 0;
@@ -18,78 +17,140 @@
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
 }
+
+
 /*gradient overlay start*/
 
-html, body {
-  width: 100%;
-  height: 100%;
-  background:url(images/image1.jpg) repeat-x, url(images/image2.jpg) no repeat;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: url(images/image1.jpg) repeat-x, url(images/image2.jpg) no repeat;
 }
 
 .bg-img {
-  width: 100%;
-  height: 100%;
-  background: url('../images/image1.jpg') center center no-repeat;
-  background-size: cover;
-  
-  &:before {
-    content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-	opacity: .6; 
-  }
+    width: 100%;
+    height: 100%;
+    background: url('../images/image1.jpg') center center no-repeat;
+    background-size: cover;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+        opacity: .6;
+    }
 }
+
 
 /*gradient overlay end*/
 
-h2 { 
-   position: absolute; 
-   top: 115px; 
-   left: 35px; 
-   width: 333px; 
-   text-align: left;
-   margin-left: 60%;
-    
+h2 {
+    position: absolute;
+    top: 115px;
+    left: 35px;
+    width: 333px;
+    text-align: left;
+    margin-left: 60%;
 }
 
-h2 span { 
-   color: white; 
-   font: bold 39px/37px 'Karla', sans-serif; 
-   letter-spacing: -1px;  
-   background: transparent;
-   padding: 0px; 
-   margin-left: -1%;
-   
-   
+h2 span {
+    color: white;
+    font: bold 39px/37px 'Karla', sans-serif;
+    letter-spacing: -1px;
+    background: transparent;
+    padding: 0px;
+    margin-left: -1%;
 }
 
 h2 span.spacer {
-   padding:0 5px;
-   text-align: right;
+    padding: 0 5px;
+    text-align: right;
+}
+/*nav bar start*/
+
+.container {
+    display: inline-block;
+    cursor: pointer;
 }
 
-h3 { 
-   color: white; 
-   font:  19px/12px 'Karla', sans-serif; 
-   letter-spacing: -1px;  
-   background: transparent;
-   padding: 0px; 
-   margin-left: -1%;
-   }
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: gray;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/*nav bar end*/
+
+h3 {
+    color: white;
+    font: 20px/15px 'Karla', sans-serif;
+    letter-spacing: 0px;
+    background: transparent;
+    padding: 20px;
+    margin-left: -5%;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid #e7e7e7;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
 
 h4 {
     color: gray;
     text-align: center;
-    font: 20px/145px 'Karla', sans-serif; 
+    font: 20px/145px 'Karla', sans-serif;
 }
 
 img {
-    position: center;
+    display: block;
+    margin: auto;
+    width: 60%;
 }
+
+footer nav {
+    display: block;
+    margin: auto;
+    width: 8%;
+    font: 18px 'Karla', sans-serif;
+    color: gray;
+    padding-top: 14px;
+}
+
+
 /*ipad lanscape / small laptop*/
 
 @media only screen and (max-width: 1024px) {

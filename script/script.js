@@ -9,3 +9,7 @@ $(window).scroll(function() {
     mn.removeClass(mns);
   }
 });
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
