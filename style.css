@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 103%;
+    color: gray;
     /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
     box-sizing: border-box;
     /*reset Chrome user agent styles*/
@@ -18,10 +19,9 @@
     -webkit-padding-end: 0px;
 }
 
-
-
 /*gradient overlay start*/
 
+/*gradient overlay end*/
 html,
 body {
     width: 100%;
@@ -46,14 +46,11 @@ body {
     }
 }
 
-
-/*gradient overlay end*/
-
 h2 {
     position: absolute;
-    top: 115px;
+    top: 300px;
     left: 35px;
-    width: 333px;
+    width: 587px;
     text-align: left;
     margin-left: 60%;
 }
@@ -129,8 +126,6 @@ button {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-
-
 
 h4 {
     color: gray;
@@ -222,15 +217,16 @@ img {
     display: block;
     margin: auto;
     width: 60%;
+    height: auto;
 }
 
 footer nav {
-    display: block;
-    margin: auto;
-    width: 8%;
+    width: 100%;
+    text-align: center;
+    height: auto;
     font: 18px 'Karla', sans-serif;
     color: gray;
-    padding-top: 14px;
+    padding-top: 0px;
 }
 
 
