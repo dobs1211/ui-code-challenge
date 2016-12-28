@@ -19,32 +19,27 @@
     -webkit-padding-end: 0px;
 }
 
-/*gradient overlay start*/
 
-/*gradient overlay end*/
+/*gradient overlay start-not working*/
+
 html,
 body {
     width: 100%;
     height: 100%;
-    background: url(images/image1.jpg) repeat-x, url(images/image2.jpg) no repeat;
 }
 
 .bg-img {
     width: 100%;
     height: 100%;
-    background: url('../images/image1.jpg') center center no-repeat;
     background-size: cover;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
-        opacity: .6;
-    }
+   /* background: url('../images/image1.jpg'); */
+  /* this will produce the gradient */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.95) 100%), url('../images/image1.jpg');
+  opacity: .6;
+    
 }
+
+/*gradient overlay end*/
 
 h2 {
     position: absolute;
@@ -68,6 +63,8 @@ h2 span.spacer {
     padding: 0 5px;
     text-align: right;
 }
+
+
 /*nav bar start*/
 
 .container {
@@ -75,7 +72,9 @@ h2 span.spacer {
     cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
     width: 35px;
     height: 5px;
     background-color: gray;
@@ -83,22 +82,29 @@ h2 span.spacer {
     transition: 0.4s;
 }
 
+
 /* Rotate first bar */
+
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
 }
 
+
 /* Fade out the second bar */
+
 .change .bar2 {
     opacity: 0;
 }
 
+
 /* Rotate last bar */
+
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
+
 
 /*nav bar end*/
 
@@ -137,83 +143,119 @@ h4 {
 
 
 /*arrow start*/
-html, body {
-  height:100%; /* allows us to size the header height based as a percent */
+
+html,
+body {
+    height: 100%;
+    /* allows us to size the header height based as a percent */
 }
 
 .header {
-  height:calc(9% - 3em); /* subtract an amount of space for your arrow element */
-  background-color:#333;
-  width:100%;
+    height: calc(9% - 3em);
+    /* subtract an amount of space for your arrow element */
+    background-color: #333;
+    width: 100%;
 }
 
 .main {
-  width:100%;
-  position:relative;
-  background-color:#fff;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
 }
+
 
 /* the wrapper element that will become the outer circle */
+
 .arrow-wrap {
-  position:absolute;
-  z-index:1;
-  left:50%;
-  top:-5em;
-  margin-left:-5em;
-  background:#111;
-  width:10em;
-  height:10em;
-  padding:4em 2em;
-  border-radius:50%;
-  font-size:0.5em;
-  display:block;
-  box-shadow:0px 0px 5px 0px #333;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: -5em;
+    margin-left: -5em;
+    background: #111;
+    width: 10em;
+    height: 10em;
+    padding: 4em 2em;
+    border-radius: 50%;
+    font-size: 0.5em;
+    display: block;
+    box-shadow: 0px 0px 5px 0px #333;
 }
+
 
 /* a triangle to make the main part of the arrow. Adjust the border-color to fit your needs */
+
 .arrow {
-  float:left;
-  position:relative;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 3em 3em 0 3em;
-  border-color: #ffffff transparent transparent transparent;
-  -webkit-transform:rotate(360deg);/* added for better anti-aliasing on webkit browsers */
+    float: left;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 3em 3em 0 3em;
+    border-color: #ffffff transparent transparent transparent;
+    -webkit-transform: rotate(360deg);
+    /* added for better anti-aliasing on webkit browsers */
 }
 
+
 /* a pseudo element arrow placed on top of the other one with the same color as the wrapper */
+
 .arrow:after {
-  content:'';
-  position:absolute;
-  top:-3.2em;
-  left:-3em;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 3em 3em 0 3em;
-  border-color: #111 transparent transparent transparent;
-  -webkit-transform:rotate(360deg);/* added for better anti-aliasing on webkit browsers */
+    content: '';
+    position: absolute;
+    top: -3.2em;
+    left: -3em;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 3em 3em 0 3em;
+    border-color: #111 transparent transparent transparent;
+    -webkit-transform: rotate(360deg);
+    /* added for better anti-aliasing on webkit browsers */
 }
 
 @-webkit-keyframes arrows {
-    0% { top:0; }
-    10% { top:12%; }
-    20% { top:0; }
-    30% { top:12%; }
-    40% { top:-12%; }
-    50% { top:12%; }
-    60% { top:0; }
-    70% { top:12%; }
-    80% { top:-12%; }
-    90% { top:12%; }
-    100% { top:0; }
-  }
-  
-  .arrow-wrap .arrow {
+    0% {
+        top: 0;
+    }
+    10% {
+        top: 12%;
+    }
+    20% {
+        top: 0;
+    }
+    30% {
+        top: 12%;
+    }
+    40% {
+        top: -12%;
+    }
+    50% {
+        top: 12%;
+    }
+    60% {
+        top: 0;
+    }
+    70% {
+        top: 12%;
+    }
+    80% {
+        top: -12%;
+    }
+    90% {
+        top: 12%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.arrow-wrap .arrow {
     -webkit-animation: arrows 2.8s 0.4s;
     -webkit-animation-delay: 3s;
-  }
+}
+
+
 /*arrow end*/
 
 img {
@@ -224,8 +266,8 @@ img {
 }
 
 h5 {
-   font: 20px/145px 'Karla', sans-serif; 
-   text-align: center;
+    font: 20px/145px 'Karla', sans-serif;
+    text-align: center;
 }
 
 li {
